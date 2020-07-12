@@ -1,0 +1,78 @@
+h3{
+    color: #2cbdb8;
+}
+.flag-dropdown {
+	position: absolute;
+	right: 0;
+	top: 70px;
+	background: #ffffff;
+	min-width: 130px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 99;
+	border: 1px solid #e5e5e5;
+}
+.language-option:hover .flag-dropdown {
+	top: 50px;
+	opacity: 1;
+	visibility: visible;
+}
+.language-option:hover .flag-dropdown {
+	top: 50px;
+	opacity: 1;
+	visibility: visible;
+}
+ .flag-dropdown {
+	position: absolute;
+	right: 0;
+	top: 70px;
+	background: #ffffff;
+	min-width: 130px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 99;
+	border: 1px solid #e5e5e5;
+}
+.language-option .flag-dropdown ul li {
+	list-style: none;
+}
+.language-option .flag-dropdown ul li a {
+	font-size: 14px;
+	color: #222222;
+	display: block;
+	padding: 10px 15px;
+	text-align: left;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.language-option .flag-dropdown ul li a:hover {
+	color: #2cbdb8;
+}
+.div-custom{
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    
+
+}
+.div-custom:hover{
+    color: #2cbdb8;
+    
+}
+.cursor{
+	cursor: pointer;
+}
+ul>li>a{
+	text-decoration: none;
+}

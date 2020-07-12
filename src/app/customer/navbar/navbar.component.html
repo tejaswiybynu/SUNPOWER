@@ -1,0 +1,72 @@
+ <!-- Page Preloder -->
+
+<!-- Offcanvas Menu Section Begin -->
+<div class="offcanvas-menu-overlay"></div>
+<div class="canvas-open">
+    <i class="icon_menu"></i>
+</div>
+<div class="offcanvas-menu-wrapper">
+    <div class="canvas-close">
+        <i class="icon_close"></i>
+    </div>
+    <div class="language-bar">
+        <div class="main-menu">
+            <ul>
+            <li><a routerLink="/sign-in">logout</a></li>
+        </ul>
+        </div>
+        
+    </div>
+    <nav class="main-menu">
+        <ul>
+            <li><a routerLink="/customer/manage-packages">Packages</a></li>
+            <li><a routerLink="/customer/manage-precheck">Pre check</a></li>
+            <li><a routerLink="/customer/manage-installation">Installation</a></li>
+            <li><a routerLink="/customer/manage-complaints">Compaints</a></li>
+   
+            
+            
+        </ul>
+    </nav>
+    
+</div>
+<!-- Offcanvas Menu Section End -->
+<!-- Header Section Begin -->
+<header class="header-section header-normal">
+    <div class="top-nav">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-9 pb-1 mb-1">
+                    <nav class="main-menu">
+                        <ul class="pb-0 mb-0"><li><h3 >SunPower</h3></li>
+                            <li><a routerLink="/customer/manage-packages">Packages</a></li>
+                            <li><a routerLink="/customer/manage-precheck">Pre check</a></li>
+                            <li><a routerLink="/customer/manage-installation">Installation</a></li>
+                            <li><a routerLink="/customer/manage-complaints">Customer Compaints</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 pb-1 mb-1">
+                    <div class="top-right">
+                        <div class="main-menu">
+                            <ul class="pb-0 mb-0">
+                                <!-- <li><h3>0</h3><span></span><i class="fa fa-shopping-cart fa-fount"></i><span></span></li> -->
+                            <li><a routerLink="/sign-in">Customer Name</a></li>
+                            <li><a routerLink="/sign-in">logout</a></li>
+                        </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+                <div  class="  text-right" style="display: inherit;">
+                     
+                <h2 style="color: white;"><i class="fa fa-shopping-cart fa-fount"></i> <span></span> {{cartCounter}}</h2>
+                         
+            </div>
+          
+        </div>
+    </div>
+    
+</header>

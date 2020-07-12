@@ -1,0 +1,65 @@
+<app-navbar-logout ></app-navbar-logout>
+<div class="container  mt-3">
+    <h3 class="text-center pt-3">Installation</h3>
+    <div class="m-1 text-right">
+        <button mat-raised-button (click)="Create();"><mat-icon>add</mat-icon> Add New</button>
+    </div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element">25/1/2015 </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef> Time Slot </th>
+      <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef> address </th>
+      <td mat-cell *matCellDef="let element"> {{element.lineAddress}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Phone# </th>
+      <td mat-cell *matCellDef="let element"> {{element.phoneNumber}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="street">
+      <th mat-header-cell *matHeaderCellDef> Comments </th>
+      <td mat-cell *matCellDef="let element"> Your Comments </td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Action</th>
+        <td mat-cell *matCellDef="let row"> 
+        <button mat-icon-button><mat-icon>launch</mat-icon></button>
+        <button mat-icon-button><mat-icon>delete_outline</mat-icon></button>
+      
+    </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="loading">
+      <mat-footer-cell *matFooterCellDef colspan="5">
+          loading data...
+      </mat-footer-cell>
+        
+      </ng-container>
+      <ng-container matColumnDef="noData">
+        <mat-footer-cell *matFooterCellDef colspan="5">
+            <!-- No data found -->
+        </mat-footer-cell>
+        </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <!-- <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':User_DATA != null}"></mat-footer-row> -->
+    <!-- <mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{'hide':!(User_DATA != null && User_DATA.data.length==0)}"></mat-footer-row> -->
+  </table>
+  
+</div>

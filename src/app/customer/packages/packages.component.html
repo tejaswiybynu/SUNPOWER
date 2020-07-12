@@ -1,0 +1,37 @@
+<app-navbar-logout ></app-navbar-logout>
+<div class="container">
+    <h4 class="property-title text-center mt-5">{{type}}</h4>
+       
+</div>   
+
+<section class="blog-section blog-page spad mt-0">
+    <div class="container">
+        <div class="row">
+            <div  *ngFor="let product of data; let i = index" class="col-lg-4 col-md-6">
+                <div class="single-blog-item">
+                    <div class="sb-pic">
+                        <img [src]="product.imagUrl" alt="">
+                    </div>
+                    <div class="sb-text">
+                        <ul>
+                            <li><i class="icon_currency"></i> {{product.price}}</li>
+                            <li><i class="fa fa-clock-o"></i> Free Delivery</li>
+                        </ul>
+                         <h4>{{product.name}}</h4>
+                        <p>{{product.description}}</p>
+                        
+                            <div class="loadmore">
+                                <a href="javascript:;" (click)="addToCart(product.id,product.price,product.imagUrl);" class="primary-btn pad"><i class="fa fa-plus"></i> Add to cart</a>
+                            </div>
+                       
+                    </div>
+                </div>
+            </div>
+            
+
+            
+        </div>
+    </div>
+</section>
+               
+                

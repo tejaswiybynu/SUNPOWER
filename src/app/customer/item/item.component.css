@@ -1,0 +1,20 @@
+h4,h5,h3 {
+    color: #2cbdb8; 
+ }
+ img{
+   height: 300px !important;
+
+   
+ }
+ .aling{
+    vertical-align: bottom;
+ }
+ .arrow-btn{
+   background-color: transparent;
+   border: none;
+ }
+ .counter{
+   color: #2cbdb8; 
+margin-left: 20px;
+margin-right: 20px;
+ }

@@ -1,0 +1,56 @@
+<div class="row" style="float: right;">
+    <div class="col-md-12" style="float: right;">
+        <button (click)="onClose()" style="background-color: transparent;border: none;font-size: 25px;"><i class="fa fa-close" style="font-size: 25px;"></i>  </button>
+        <!-- <mat-icon id="close-icon" (click)="onClose()">close</mat-icon> -->
+    </div>
+</div>
+<h3 class="text-center pt-3">Add / Update</h3>
+<section class="blog-section blog-page">
+    <div class="container-fluid">
+        <form #regForm="ngForm" (ngSubmit)="addActivity(regForm)">
+            <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="activitiesService.userActivity.id">
+            <input type="hidden" name="status" #status="ngModel" [(ngModel)]="activitiesService.userActivity.status">
+            <input type="hidden" name="dataType" #dataType="ngModel" [(ngModel)]="activitiesService.userActivity.dataType">
+            <input type="hidden" name="userId" #userId="ngModel" [(ngModel)]="activitiesService.userActivity.userId">
+            <div class="row  offset-lg-1 ">
+              
+                <div class="col-sm-6    pt-3">
+                    <div class="form-group" style="display: flex;">
+                        <input  [matDatepicker]="picker" type="text" class="form-control" placeholder="Date" #activityDate='ngModel' name="activityDate" [(ngModel)]="activitiesService.userActivity.activityDate" required readonly>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" name="orderId" #orderId="ngModel" [(ngModel)]="activitiesService.userActivity.orderId">
+                            <option  *ngFor="let sta of activitiesService.orders; let i = index"  [ngValue]="sta.id">{{sta.id}}</option>
+                        </select>
+                    </div>
+                   
+                </div>
+                <div class="col-sm-6 pt-3">
+                    <div class="form-group">
+                        <select class="form-control" name="timeSlot"  #timeSlot="ngModel" [(ngModel)]="activitiesService.userActivity.timeSlot">
+                            <option>Morning (9:00 AM - 11:59 PM)</option>
+                            <option>Noon (12:00 PM - : 02:59 PM)</option>
+                            <option>Evening (3:00 PM - 05:00 PM)</option>
+                        </select>
+                    </div>
+                   <div class="form-group">
+                        <textarea class="form-control" placeholder="Comments" name="comments"  #comments="ngModel" [(ngModel)]="activitiesService.userActivity.comments"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                        
+                        </div> 
+                        <div class="col-lg-6 mt-2 text-right sb-text">
+                            <button type="submit" [disabled]="regForm.invalid || activityDate==''" Id="SignUp" class="site-btn">Add</button>
+                        </div> 
+                      </div>
+                              
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+

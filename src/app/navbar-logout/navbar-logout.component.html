@@ -1,0 +1,173 @@
+<!-- Page Preloder -->
+
+<!-- Offcanvas Menu Section Begin -->
+<div class="offcanvas-menu-overlay"></div>
+<div class="canvas-open">
+    <i class="icon_menu"></i>
+</div>
+<div class="offcanvas-menu-wrapper">
+    <div class="canvas-close">
+        <i class="icon_close"></i>
+    </div>
+    <div class="language-bar">
+        <div class="main-menu">
+            <ul>
+            <li><a routerLink="/sign-in">login</a></li>
+        </ul>
+        </div>
+
+    </div>
+    <nav class="main-menu">
+        <ul>
+            <li><a routerLink="/home"><img src="assets/img/sunpower-nobg.png" alt=""></a></li>
+            <li><a routerLink="/pre-check">off-grid calculator</a></li>
+            <li><a routerLink="/about-us">About Us</a></li>
+            <li><a routerLink="/gallery">Gallery</a></li>
+            <li><a routerLink="/faq">FAQ</a></li>
+            <li><a routerLink="/contact-us">Contact Us</a></li>
+
+            <li><a routerLink="/sign-in">Login</a></li>
+        </ul>
+    </nav>
+    <!-- <div class="nav-logo-right">
+        <ul>
+            <li>
+                <i class="icon_phone"></i>
+                <div class="info-text">
+                    <span>Phone:</span>
+                    <p>(+12) 345 6789</p>
+                </div>
+            </li>
+            <li>
+                <i class="icon_map"></i>
+                <div class="info-text">
+                    <span>Address:</span>
+                    <p>16 Creek Ave, <span>NY</span></p>
+                </div>
+            </li>
+            <li>
+                <i class="icon_mail"></i>
+                <div class="info-text">
+                    <span>Email:</span>
+                    <p>Info.cololib@gmail.com</p>
+                </div>
+            </li>
+        </ul>
+    </div> -->
+</div>
+<!-- Offcanvas Menu Section End -->
+<!-- Header Section Begin -->
+<header class="header-section header-normal">
+    <div class="top-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 pr-0">
+                    <nav class="main-menu">
+                        <ul>
+                            <li><a routerLink="/home" class="pb-0 cursor"><img src="assets/img/sunpower-nobg.png" alt=""></a></li>
+                            <li><a routerLink="/pre-check" class="cursor">off-grid calculator</a></li>
+                            <!-- <li><a routerLink="/about-us">About Us</a></li>
+                            <li><a routerLink="/gallery">Gallery</a></li>
+                            <li><a routerLink="/faq">FAQ</a></li>
+                            <li><a routerLink="/contac-us">Contact Us</a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4 pl-0" >
+                    <div class="top-right"  style="text-align: left !important;">
+                        <div class="language-option div-custom mt-4" >
+                            <!-- <img src="assets/img/flag.png" alt=""> -->
+                            <span style="margin-top: 12px;" >products</span>
+                            <i class="fa fa-angle-down"></i>
+                            <div class="flag-dropdown">
+                                <ul>
+                                    <!-- <li><a routerLink="/manage-packages">off-grid systems</a></li>
+                                    <li><a routerLink="/system-components">system components</a></li> -->
+                                    <li  *ngFor="let item of cat;  let i = index"><a href="javascript:;"(click)="loadComponent(item.Id)">{{item.name}}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="language-option div-custom mt-4">
+                            <!-- <img src="assets/img/flag.png" alt=""> -->
+                            <!-- <a routerLink="/manage-precheck">appointments</a> -->
+                            <a href="javascript:;"(click)="loadComponent('appointments')">appointments</a>
+                         
+                        
+                        </div>
+                        <div class="language-option div-custom mt-4">
+                            <!-- <img src="assets/img/flag.png" alt=""> -->
+                            <span style="margin-top: 12px;" >about us</span>
+                            <i class="fa fa-angle-down"></i>
+                            <div class="flag-dropdown">
+                                <ul >
+                                    <li><a routerLink="/gallery">Gallery</a></li>
+                                    <li><a routerLink="/faq">FAQ</a></li>
+                                    <li><a routerLink="/contact-us">Contact Us</a></li>
+                                    <li><a routerLink="/about-us">About Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- <a href="#" class="property-sub">Submit Property</a> -->
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="top-right">
+                        <div class="main-menu">
+                            <ul class="pb-0 mb-0">
+                            <li  *ngIf="login==0"><a routerLink="/sign-in" style="margin-top: 35px;">login</a></li>
+                            <!-- <li  *ngIf="login==1"><a href="javascript:;" style="margin-top: 35px;"">Customer Name</a></li> -->
+                            <li  *ngIf="login==1"><span style="margin-top: 35px;color:white;font-weight: 500;">{{userLogin.user.firstName}} {{userLogin.user.lastName}}</span></li>
+                            <li  *ngIf="login==1"><a href="javascript:;" (click)="logout()" style="margin-top: 35px;">logout</a></li>
+                        </ul>
+                      
+                        <div  class="text-right" style="display: inherit;">
+                            <h2 style="color: white;"><a routerLink="/cart"><i class="fa fa-shopping-cart fa-fount"></i> <span></span> {{cartCounter}}</a> </h2>
+                        </div>
+                        </div>
+                    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1">
+                    <!-- <div class="" style="padding-top:17px;padding-bottom: 18px;">
+                        <a href="./index.html"><img src="assets/img/sunpower.png" alt=""></a>
+                    </div> -->
+                </div>
+                <div class="col-lg-11">
+                    <div class="nav-logo-right">
+                        <ul>
+                            <li>
+                                <i class="icon_phone"></i>
+                                <div class="info-text">
+                                    <span>Phone:</span>
+                            <p>840 345 6789</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="icon_map"></i>
+                                <div class="info-text">
+                                    <span>Address:</span>
+                                    <p>Tempe <span>Arizona</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="icon_mail"></i>
+                                <div class="info-text">
+                                    <span>Email:</span>
+                                    <p>sunpowerdemoproject@gmail.com</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->

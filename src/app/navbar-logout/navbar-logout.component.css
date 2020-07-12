@@ -1,0 +1,31 @@
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover{
+    color: #2cbdb8;
+}
+.div-custom>span:hover{
+    color: #2cbdb8;
+    
+}
+.div-custom{
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    
+
+}
+i{
+    color:#2cbdb8;
+}
+.fa-fount{
+    font: normal normal normal 40px FontAwesome;
+}
+h2{
+    color: #2cbdb8;
+}
