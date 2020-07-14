@@ -27,10 +27,8 @@ export class LoginComponent implements OnInit {
       this.userLogin.selectedcat = "THE CABIN";
       this.UpdateInfo();
     });
-
-
-
   }
+  
   UpdateInfo() {
     if (this.userLogin.user) {
       if (this.userLogin.user.role == 'Team') {

@@ -61,6 +61,7 @@ export class PackagesComponent implements OnInit {
     this.cartCounter++;
     //this.addtocart();
   }
+  //Doubt 
   addtocart() {
     this.cart.updateDate(1);
   }
@@ -70,10 +71,12 @@ export class PackagesComponent implements OnInit {
       this.toaster.info('Please Sign in First.', 'User');
     } else {
       let list = this.orderList.filter(x => x.productId == id);
+
       if (list.length > 0) {
         this.taster.info('Item already added', 'Shopping');
       } else {
         let customObj = new Order();
+        //Doubt
         customObj.id = 0;
         customObj.userId = this.userLogin.user.id;
         customObj.productId = id;

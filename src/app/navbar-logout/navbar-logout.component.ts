@@ -33,6 +33,10 @@ export class NavbarLogoutComponent implements OnInit {
     this.orderservice.orderData=[];
     this.router.navigateByUrl('/home');
   }
+
+  public updateUser() {
+    this.router.navigate(['/sign-up-customer']);
+  }
   loadComponent(componentType:string,type){
     this.userLogin.selectedcat=componentType;
     if(this.userLogin.user ==null && componentType=="appointments"){

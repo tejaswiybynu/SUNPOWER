@@ -10,11 +10,11 @@
         <i class="icon_close"></i>
     </div>
     <div class="language-bar">
-        <div class="main-menu">
+       <!-- TEJU DELETED<div class="main-menu">
             <ul>
             <li><a routerLink="/sign-in">login</a></li>
         </ul>
-        </div>
+        </div> --> 
 
     </div>
     <nav class="main-menu">
@@ -29,31 +29,7 @@
             <li><a routerLink="/sign-in">Login</a></li>
         </ul>
     </nav>
-    <!-- <div class="nav-logo-right">
-        <ul>
-            <li>
-                <i class="icon_phone"></i>
-                <div class="info-text">
-                    <span>Phone:</span>
-                    <p>(+12) 345 6789</p>
-                </div>
-            </li>
-            <li>
-                <i class="icon_map"></i>
-                <div class="info-text">
-                    <span>Address:</span>
-                    <p>16 Creek Ave, <span>NY</span></p>
-                </div>
-            </li>
-            <li>
-                <i class="icon_mail"></i>
-                <div class="info-text">
-                    <span>Email:</span>
-                    <p>Info.cololib@gmail.com</p>
-                </div>
-            </li>
-        </ul>
-    </div> -->
+   
 </div>
 <!-- Offcanvas Menu Section End -->
 <!-- Header Section Begin -->
@@ -118,6 +94,7 @@
                             <!-- <li  *ngIf="login==1"><a href="javascript:;" style="margin-top: 35px;"">Customer Name</a></li> -->
                             <li  *ngIf="login==1"><span style="margin-top: 35px;color:white;font-weight: 500;">{{userLogin.user.firstName}} {{userLogin.user.lastName}}</span></li>
                             <li  *ngIf="login==1"><a href="javascript:;" (click)="logout()" style="margin-top: 35px;">logout</a></li>
+                            <li  *ngIf="login==1"><a href="javascript:;" (click)="updateUser()" style="margin-top: 35px;">update</a></li>
                         </ul>
                       
                         <div  class="text-right" style="display: inherit;">

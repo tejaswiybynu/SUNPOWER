@@ -3,9 +3,11 @@ import { Router } from '@angular/router';
 import { MatDialogRef } from '@angular/material';
 import { UserService } from '../services/user.service';
 import { NgForm, NgModel } from '@angular/forms';
+
 import { from } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 import { Users } from '../model/Users';
+import { NavbarService } from '../services/navbar.service';
 
 
 @Component({
@@ -15,11 +17,12 @@ import { Users } from '../model/Users';
 })
 export class SignUpCustomerComponent implements OnInit {
   data: Users;
+  public login: number;
+
   constructor(private router: Router,
-    private service: UserService, private toastr: ToastrService) { }
+    private service: UserService, private toastr: ToastrService, private navbarService: NavbarService) { }
 
   ngOnInit() {
-
     this.data = {
       id: 0,
       firstName: "",
@@ -30,17 +33,14 @@ export class SignUpCustomerComponent implements OnInit {
       role: "Admin",
       password: ""
     }
-
+    if (this.navbarService.user) {
+      this.data = this.navbarService.user;
+      this.navbarService.customerLogin.subscribe( x => this.login= x );
+    } else {
+      this.login = 0;
+    }
   }
 
-  SignUp(regForm: any) {
-
-    this.onClose();
-  }
-  onClose() {
-    // this.matDialogRef.close();
-    //this.service.formData.
-  }
   resetFrom(form?: NgForm) {
     if (form == null)
       form.resetForm();
@@ -85,7 +85,7 @@ export class SignUpCustomerComponent implements OnInit {
       res => {
         this.resetFrom(form);
         this.toastr.success('Information saved successfully', 'Register User');
-        this.onClose();
+        
       },
       err => {
         console.log(err)
