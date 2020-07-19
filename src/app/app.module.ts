@@ -24,7 +24,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { NavbarTeamComponent } from './navbar-team/navbar-team.component';
-import { NavbarCustomerComponent } from './navbar-customer/navbar-customer.component';
 import { AdminModule } from './admin/admin.module';
 import { PreCheckComponent } from './pre-check/pre-check.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -64,7 +63,6 @@ import { PaymentComponent } from './payment/payment.component';
     ManageUserComponent,
     NavbarAdminComponent,
     NavbarTeamComponent,
-    NavbarCustomerComponent,
     PreCheckComponent
     , ComplaintsComponent, PackagesComponent, PrecheckComponent, InstallationComponent,AddPrecheckComponent,ItemComponent, ConfirmDailogComponent, CartComponent, CustomerRattingComponent, PaymentComponent
   ], 

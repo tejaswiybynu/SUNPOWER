@@ -14,7 +14,13 @@ export class AddPrecheckComponent implements OnInit {
 
   constructor(private matDialogRef:MatDialogRef<AddPrecheckComponent>,private activitiesService:ActivitiesService,private toastr: ToastrService) { }
  //  userActivities:UserActivity;
+ public minDate: Date;
+ public maxDate: Date;
   ngOnInit() {
+    const currentDate = new Date();
+    const currentYear = new Date().getFullYear();
+    this.minDate = new Date(currentDate);
+    this.maxDate = new Date(currentYear + 1, 11, 31);
   }
    onSubmit(regForm:NgForm){
    // console.log(regForm.value);   

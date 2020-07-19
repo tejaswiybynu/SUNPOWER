@@ -15,12 +15,12 @@ export class CustomerRattingComponent implements OnInit {
     currentRate = 4;
   ngOnInit() {
   }
-  SignUp(regForm:any){
+  //SignUp(regForm:any){
 
-    this.onClose();
- }
+  //  this.onClose();
+ //}
  onSubmit(){
-   this.toastr.success("Thanks for rating us","Order Module");
+   this.toastr.success("Thanks for rating us","");
      this.onClose();
   }
  

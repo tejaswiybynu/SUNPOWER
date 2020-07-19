@@ -37,7 +37,7 @@ export class NavbarLogoutComponent implements OnInit {
   public updateUser() {
     this.router.navigate(['/sign-up-customer']);
   }
-  loadComponent(componentType:string,type){
+  loadComponent(componentType:string){
     this.userLogin.selectedcat=componentType;
     if(this.userLogin.user ==null && componentType=="appointments"){
       this.router.navigate(['/sign-in']);

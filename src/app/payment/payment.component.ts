@@ -9,31 +9,28 @@ import { MatDialogRef } from '@angular/material';
 export class PaymentComponent implements OnInit {
 
   constructor(
-    private matDialogRef:MatDialogRef<PaymentComponent>) { }
-data:any;
-ngOnInit() {
+    private matDialogRef: MatDialogRef<PaymentComponent>) { }
+  data: any;
+  ngOnInit() {
+    this.data = {
+      name: "",
+      CardNumber: 0,
+      Valid: "",
+      CVV: 0
+    }
+  }
+  
 
-this.data={
-  name:"",
-  CardNumber:0,
-  Valid:"",
-  CCV:0
-}
+  //SignUp(regForm: any) {
+  //  this.onClose();
+  //}
 
-}
+  //onClose() {
+    
+ // }
 
-SignUp(regForm:any){
-
-this.onClose();
-}
-onClose(){
-this.matDialogRef.close(true);
-//this.service.formData.
-}
-
-onSubmit(){
-this.onClose();
-
-}
-
+  onSubmit() {
+   // this.onClose();
+    this.matDialogRef.close(true);
+  }
 }

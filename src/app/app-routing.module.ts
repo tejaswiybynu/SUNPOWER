@@ -83,10 +83,7 @@ const routes: Routes = [
     path: 'customer',
     loadChildren:'src/app/customer/customer.module#CustomerModule'
   },
-  // {
-  //   path: 'admin',
-  //   loadChildren: () => import('src/app/admin/admin.module').then(m => m.AdminModule)
-  // },
+ 
  
 ];
 

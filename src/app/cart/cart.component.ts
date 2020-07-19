@@ -38,7 +38,7 @@ export class CartComponent implements OnInit {
               dialoCgonfig.width="60%";
                this.dialog.open(PaymentComponent,dialoCgonfig).beforeClose()
                .subscribe(x=>{
-                this.toaster.success('Information saved successfully','Order Module');
+                this.toaster.success('Information saved successfully','Order');
                 this.cartCounter=0;
                this.cart.updateDate(this.cartCounter);
                this.orderservice.orderData=[]; 
@@ -61,13 +61,13 @@ export class CartComponent implements OnInit {
            row.quantity++;
            row.total=row.quantity*row.price;
     }
-    subtractQuantity(row){
+    subtractQuantity(row:Order){
       if(row.quantity>1){
       row.quantity--;
       row.total=row.quantity*row.price;
       }
 }
-removeItem(row){
+removeItem(row: Order){
   this.myDailog.openDailogBox('Are you sure to delete this record ?').afterClosed()
   .subscribe(res=>{
     if(res){
