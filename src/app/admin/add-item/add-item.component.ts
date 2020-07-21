@@ -8,7 +8,7 @@ import { ProductService } from 'src/app/services/product.service';
 import { NgForm } from '@angular/forms';
 import { from } from 'rxjs';
 import { ManagePackageComponent } from '../manage-package/manage-package.component';
-import { ManageUserComponent } from 'src/app/manage-user/manage-user.component';
+
 import { categories } from 'src/app/model/categories';
 import { CategoiesService } from 'src/app/services/categoies.service';
 @Component({

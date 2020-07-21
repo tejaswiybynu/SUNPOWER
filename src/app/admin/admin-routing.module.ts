@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { ManageUserComponent } from './manage-user/manage-user.component';
 import { IndexComponent } from './index/index.component';
 import { ManagePackageComponent } from './manage-package/manage-package.component';
-import { SingleItemComponent } from './single-item/single-item.component';
 import { AddItemComponent } from './add-item/add-item.component';
 
 

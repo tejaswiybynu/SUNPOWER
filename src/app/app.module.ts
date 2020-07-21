@@ -9,21 +9,17 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FaqComponent } from './faq/faq.component';
 import { IndexComponent } from './index/index.component';
-import { CalculationComponent } from './calculation/calculation.component';
 import { LoginComponent } from './login/login.component';
-import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
 import { SignUpTeamMemberComponent } from './sign-up-team-member/sign-up-team-member.component';
 import { SignUpCustomerComponent } from './sign-up-customer/sign-up-customer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SingUpComponent } from './sing-up/sing-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ManageUserComponent } from './manage-user/manage-user.component';
+
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
-import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
-import { NavbarTeamComponent } from './navbar-team/navbar-team.component';
 import { AdminModule } from './admin/admin.module';
 import { PreCheckComponent } from './pre-check/pre-check.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -54,15 +50,15 @@ import { PaymentComponent } from './payment/payment.component';
     AboutUsComponent,
     FaqComponent,
     IndexComponent,
-    CalculationComponent,
+    
     LoginComponent,
-    SignUpAdminComponent,
+    
     SignUpTeamMemberComponent,
     SignUpCustomerComponent,
     SingUpComponent,
-    ManageUserComponent,
-    NavbarAdminComponent,
-    NavbarTeamComponent,
+    
+   
+    
     PreCheckComponent
     , ComplaintsComponent, PackagesComponent, PrecheckComponent, InstallationComponent,AddPrecheckComponent,ItemComponent, ConfirmDailogComponent, CartComponent, CustomerRattingComponent, PaymentComponent
   ], 

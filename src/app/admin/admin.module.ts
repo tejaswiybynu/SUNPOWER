@@ -10,13 +10,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import { SingleItemComponent } from './single-item/single-item.component';
+
 import { AddItemComponent } from './add-item/add-item.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
-  declarations: [ManageUserComponent, ManagePackageComponent, NavbarComponent, IndexComponent, SingleItemComponent, AddItemComponent],
+  declarations: [ManageUserComponent, ManagePackageComponent, NavbarComponent, IndexComponent, AddItemComponent],
   exports: [ManageUserComponent],
   imports: [
     CommonModule,

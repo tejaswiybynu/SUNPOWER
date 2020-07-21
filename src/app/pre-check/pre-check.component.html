@@ -32,6 +32,7 @@
                             <input type ="text" #zipCodeControl
                              class ="form-control" 
                             [(ngModel)]="zipcode" 
+                            pattern= "[0-9]+"
                             name ="zipcode"
                             placeholder="Ex. 85281" maxlength="5">
                            
@@ -105,7 +106,7 @@
                     <div class="col-md-4 " style="font-weight: bold;">{{a}} kW</div>
                 </div>
             </div>
-                <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form);" >
+                <form #form="ngForm" autocomplete="off" >
                 <div class="row mt-3">
                     <div class="col-md-8" > 
                         <input type="email" required  name="email"  [(ngModel)]="email" class="form-control  m-2 "/> 

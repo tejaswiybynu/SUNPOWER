@@ -43,11 +43,11 @@ export class CartComponent implements OnInit {
                this.cart.updateDate(this.cartCounter);
                this.orderservice.orderData=[]; 
                this.dataSource = this.orderservice.orderData;
-                this.dialog.open(CustomerRattingComponent,dialoCgonfig).beforeClose()
+               this.dialog.open(CustomerRattingComponent,dialoCgonfig).beforeClose()
                 .subscribe(x=>{
                  this.router.navigate(['/home']);
                 });
-               });
+              });
       }, 
       err=>{
         console.log(err)
