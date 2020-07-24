@@ -23,7 +23,7 @@ export class PaymentComponent implements OnInit {
     const currentDate = new Date();
     const currentYear = new Date().getFullYear();
     this.minDate = new Date(currentDate);
-    this.maxDate = new Date(currentYear + 1, 11, 31);
+    this.maxDate = new Date(currentYear + 2, 11, 31);
     this.data = {
       name: "",
       CardNumber: 0,
@@ -31,12 +31,7 @@ export class PaymentComponent implements OnInit {
       CVV: 0
     }
   }
-  
-
-  
-
-
-    onClose(){
-    this.matDialogRef.close(true);
-      }
+onSubmit(){
+  this.matDialogRef.close(true);
+}
   }

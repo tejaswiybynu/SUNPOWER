@@ -21,7 +21,7 @@ export class PrecheckComponent implements OnInit {
   @ViewChild('ComplaintsPaginator',{static: false}) paginatorComplaints:MatPaginator;
   constructor(private dialog:MatDialog,private dropdown:ActivitiesService,private nvarbar:NavbarService
     ,private toaster:ToastrService,private myDailog:DailogService) { }
-  displayedColumns: string[] = ['id','firstName', 'lastName', 'email', 'street','actions'];
+  displayedColumns: string[] = ['id','firstName', 'lastName', 'email', 'street','status','actions'];
   dataSource : MatTableDataSource<UserActivity>;
   dataSourceInstallation:MatTableDataSource<UserActivity>;
   dataSourceComaplaints:MatTableDataSource<UserActivity>;
@@ -142,7 +142,9 @@ export class PrecheckComponent implements OnInit {
         });
 
 }
+
 onEdit(row:UserActivity){
+  
   this.dropdown.userActivity=Object.assign({},row);
   //console.log(row)
  

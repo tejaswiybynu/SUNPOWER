@@ -32,7 +32,7 @@
     
                             </div>
                         </div>
-                        <textarea type="text" class="form-control" placeholder="Description" name="Description" #Description="ngModel" [(ngModel)]="data.description"></textarea>
+                        <textarea type="text" class="form-control" placeholder="Product Description" name="Description" minlength =8 maxlength =20 #Description="ngModel" [(ngModel)]="data.description"></textarea>
                         </div>
                         
                     </div>
@@ -49,7 +49,7 @@
     
                             </div>
                         </div>
-                        <input type="text" class="form-control" placeholder="Name" name="Name" #Name="ngModel" [(ngModel)]="data.name" required>
+                        <input type="text" class="form-control" placeholder="Product Name" minlength =2 maxlength =20 name="Name" #Name="ngModel" [(ngModel)]="data.name" required>
                         </div>
                         
                     </div>
@@ -61,7 +61,7 @@
     
                             </div>
                         </div>
-                        <input type="text" class="form-control" placeholder="SkuId"  name="SkuId" #SkuId="ngModel" [(ngModel)]="data.skuId" required>
+                        <input type="text" class="form-control" placeholder="SkuId"  name="SkuId" maxlength="5" pattern= "[0-9]+" #SkuId="ngModel" [(ngModel)]="data.skuId" required>
                         </div>
                         
                     </div>
@@ -74,7 +74,7 @@
     
                             </div>
                         </div>
-                        <input type="input" class="form-control" placeholder="Price"  name="Price" #Price="ngModel" [(ngModel)]="data.price" required  >
+                        <input type="input" class="form-control" placeholder="Price"  name="Price" maxlength="4" pattern= "[0-9]+" #Price="ngModel" [(ngModel)]="data.price" required  >
                         </div>
                         
                     </div>
@@ -87,7 +87,7 @@
     
                             </div>
                         </div>
-                        <input type="text" class="form-control" placeholder="Daily Product Estimatin" name="DailyProductEstimatin" #DailyProductEstimatin="ngModel" [(ngModel)]="data.dailyProductEstimatin" required>
+                        <input type="text" class="form-control" placeholder="Daily Product Estimation(kwH)" pattern= "[0-9]+" maxlength="3" name="DailyProductEstimatin" #DailyProductEstimatin="ngModel" [(ngModel)]="data.dailyProductEstimatin" required>
                         </div>
                         
                     </div>
