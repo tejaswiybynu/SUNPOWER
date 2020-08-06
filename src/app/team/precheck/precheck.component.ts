@@ -16,7 +16,7 @@ export class PrecheckComponent implements OnInit {
     , private toaster: ToastrService, private myDailog: DailogService) { }
 
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'street', 'time', 'status', 'actions'];
-  
+
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
   dataSource: MatTableDataSource<UserActivity>;
   ngOnInit() {
@@ -39,7 +39,7 @@ export class PrecheckComponent implements OnInit {
           row.status = status;
           this.service.put(row.id, row).subscribe(
             res => {
-              this.toaster.success('Status changed successfully', 'Manage Complaints');
+              this.toaster.success('Status changed successfully');
               this.refreshList();
             },
             err => {

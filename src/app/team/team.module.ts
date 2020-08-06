@@ -9,7 +9,7 @@ import { ComplaintsComponent } from './complaints/complaints.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatTableModule, MatIconModule, MatButtonModule, MatDialogModule, MatSnackBarModule, MatPaginatorModule, MatFormFieldModule } from '@angular/material';
+import { MatTableModule, MatIconModule, MatButtonModule, MatDialogModule, MatSnackBarModule, MatPaginatorModule, MatFormFieldModule, MatDialogRef } from '@angular/material';
 import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -18,6 +18,7 @@ import { ToastrModule } from 'ngx-toastr';
     CommonModule,
     TeamRoutingModule,
     MatDialogModule,
+   
     MatTableModule, MatIconModule, MatButtonModule,MatSelectModule,
     MatSnackBarModule,ToastrModule,
     ReactiveFormsModule ,MatPaginatorModule,MatFormFieldModule

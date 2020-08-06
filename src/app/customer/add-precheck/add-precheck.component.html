@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-group">
                         <label><b>Order Number </b></label>
-                        <select class="form-control" name="orderId" #orderId="ngModel"
+                        <select class="form-control" name="orderId" #orderId="ngModel" (change) = "selectOption($event.target.value)"
                             [(ngModel)]="activitiesService.userActivity.orderId">
                             <option *ngFor="let sta of activitiesService.orders; let i = index" [ngValue]="sta.id">
                                 {{sta.id}}</option>
@@ -61,8 +61,9 @@
 
                         </div>
                         <div class="col-lg-6 mt-2 text-right sb-text">
-                            <button type="submit" [disabled]="regForm.invalid || activityDate==''" Id="SignUp"
+                            <button type="submit" [disabled]="regForm.invalid || activityDate=='' || !enableButton" Id="SignUp"
                                 class="site-btn">Add</button>
+                                <div> {{enableButton}} </div>
                         </div>
                     </div>
 

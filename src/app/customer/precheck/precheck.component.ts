@@ -144,7 +144,6 @@ export class PrecheckComponent implements OnInit {
 }
 
 onEdit(row:UserActivity){
-  
   this.dropdown.userActivity=Object.assign({},row);
   //console.log(row)
  

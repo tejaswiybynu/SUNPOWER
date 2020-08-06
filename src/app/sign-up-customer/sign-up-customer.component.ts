@@ -84,8 +84,8 @@ export class SignUpCustomerComponent implements OnInit {
     this.service.putUser(form.value.Id, form.value).subscribe(
       res => {
         this.resetFrom(form);
-        this.toastr.success('Information saved successfully', 'Register User');
-        
+        this.toastr.success('Information updated successfully', 'Register User');
+        this.router.navigateByUrl('/home');
       },
       err => {
         console.log(err)

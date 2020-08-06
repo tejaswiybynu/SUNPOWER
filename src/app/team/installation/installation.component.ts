@@ -12,41 +12,41 @@ import { UserActivity } from 'src/app/model/UserActivity';
   styleUrls: ['./installation.component.css']
 })
 export class InstallationComponent implements OnInit {
-  constructor(private dialog:MatDialog,private service:ActivitiesService,private nvarbar:NavbarService
-    ,private toaster:ToastrService,private myDailog:DailogService) { }
-  displayedColumns: string[] = ['id','firstName', 'lastName', 'email', 'street','time','status','actions'];
-  @ViewChild(MatPaginator,{static: false}) paginator:MatPaginator;
-  dataSource : MatTableDataSource<UserActivity>;
+  constructor(private dialog: MatDialog, private service: ActivitiesService, private nvarbar: NavbarService
+    , private toaster: ToastrService, private myDailog: DailogService) { }
+  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'street', 'time', 'status', 'actions'];
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  dataSource: MatTableDataSource<UserActivity>;
   ngOnInit() {
     this.refreshList();
   }
-  Create(){
+  Create() {
 
-    }
-    refreshList(){
-      this.service.getUserActivity().subscribe(x=>{
-        this.dataSource=new MatTableDataSource(x.filter(x=>x.dataType=='Installation'));
-        this.dataSource.paginator=this.paginator;
-       
-      })  
-    }
-    onDellete(row:UserActivity,status:any){
-      this.myDailog.openDailogBox('Are you sure to change the status?').afterClosed()
-      .subscribe(res=>{
-        if(res){
-                     row.status=status;
-                this.service.put(row.id,row).subscribe(
-                      res=>{
-                              this.toaster.success('Status changed successfully','Manage Complaints');
-                              this.refreshList();
-                      }, 
-                      err=>{
-                        console.log(err)
-                      }
-                    )
+  }
+  refreshList() {
+    this.service.getUserActivity().subscribe(x => {
+      this.dataSource = new MatTableDataSource(x.filter(x => x.dataType == 'Installation'));
+      this.dataSource.paginator = this.paginator;
+
+    })
+  }
+  onDellete(row: UserActivity, status: any) {
+    this.myDailog.openDailogBox('Are you sure to change the status?').afterClosed()
+      .subscribe(res => {
+        if (res) {
+          row.status = status;
+          this.service.put(row.id, row).subscribe(
+            res => {
+              this.toaster.success('Status changed successfully', 'Manage Complaints');
+              this.refreshList();
+            },
+            err => {
+              console.log(err)
+            }
+          )
         }
       });
 
-}
+  }
 
 }

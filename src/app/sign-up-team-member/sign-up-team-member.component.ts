@@ -63,7 +63,7 @@ insertDate(form:NgForm){
     this.service.postUser(form.value).subscribe(
     res=>{
              this.resetFrom(form); 
-             this.toastr.success('Information saved successfully','Register User');
+             this.toastr.success('New Team Member added');
              this.onClose();
     }, 
     err=>{
@@ -76,7 +76,7 @@ updateData(form:NgForm){
     this.service.putUser(form.value.Id,form.value).subscribe(
     res=>{
              this.resetFrom(form); 
-             this.toastr.success('Information saved successfully','Register User');
+             this.toastr.success('Team Member details updated successfully');
              this.onClose();
     }, 
     err=>{

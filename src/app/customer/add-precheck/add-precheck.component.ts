@@ -16,6 +16,7 @@ export class AddPrecheckComponent implements OnInit {
  //  userActivities:UserActivity;
  public minDate: Date;
  public maxDate: Date;
+ public enableButton:boolean;
   ngOnInit() {
     const currentDate = new Date();
     const currentYear = new Date().getFullYear();
@@ -29,6 +30,14 @@ export class AddPrecheckComponent implements OnInit {
     }
     onClose(){
       this.matDialogRef.close(true);
+    }
+    selectOption(id:number) {
+      console.log(this.activitiesService.userActivity.orderId);
+      if (this.activitiesService.userActivity.status === 'completed' && this.activitiesService.userActivity.dataType === 'prechecks') {
+        this.enableButton = true;
+      } else {
+      this.enableButton = false;
+      }
     }
     addActivity(form:NgForm){
     //  form.value.Role="Team";
@@ -57,7 +66,7 @@ export class AddPrecheckComponent implements OnInit {
     )
   }
   updateData(form:NgForm){
-      this.activitiesService.put(form.value.Id,form.value).subscribe(
+      this.activitiesService.put(form.value.Id,form.value, true).subscribe(
       res=>{
                //this.resetFrom(form); 
                this.toastr.success('Information saved successfully','Register User');

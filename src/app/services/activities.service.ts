@@ -20,8 +20,11 @@ export class ActivitiesService {
     console.log(formData);
     return this.http.post(this.rootUrl+'/UserActivities',formData);
   }
-  put(id:any,formData:UserActivity){
-   
+  put(id:any,formData:UserActivity, updateCustomer?: boolean){
+    formData.reschedule = null;
+   if (updateCustomer) {
+     formData.reschedule = 'reschedule';
+   }  
     return this.http.put(this.rootUrl+'/UserActivities/'+id,formData);
   }
   delete(id:any){
